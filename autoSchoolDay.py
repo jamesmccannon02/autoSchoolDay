@@ -14,7 +14,7 @@ if __name__ == '__main__':
     logging.basicConfig(filename="autoSchoolDay.log")
     try:
         if len(sys.argv) > 1:
-            print(sys.argv)
+            print("Operation not available")
         else:
             std_day()
     except:
