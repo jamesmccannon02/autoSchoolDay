@@ -1,4 +1,4 @@
-# Automatically open your applications for school
+# Automatically open your applications for school (Under development)
 
 This is designed to open a number of applications on startup using a simple ```school``` command within the command prompt
 
