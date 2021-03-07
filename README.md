@@ -16,7 +16,7 @@ Then you need to add your application to the path. On mad do the following:
 2. Add the following
     ```
    function school(){
-    python ~/[path to file]
+    python ~/[path to file] $1
     }
     ```
 3. Exit and save
