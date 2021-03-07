@@ -28,32 +28,44 @@ def python():
 
 if __name__ == '__main__':
 
-    parser = argparse.ArgumentParser(description="This allows quick opening of applications used within the school day")
-    subparsers = parser.add_subparsers()
+    parser = argparse.ArgumentParser(
+        description="This allows quick opening of applications used within the school day"
+    )
 
-    #main commands
-    parser.add_argument("school", choices=['start', 'engine', 'bus', 'cs', 'python'])
-
-    #Sub commands
-    parser_engineering = subparsers.add_parser("engine", help="This is used to control all aspects of the engineering command")
-
+    parser.add_argument(
+        "--start",
+        action='store_true',
+        help="This will open all the standard applications used within the school day.",
+    )
+    parser.add_argument(
+        "--engine",
+        action='store_true',
+        help="This will show the Engineering folder within Documents",
+    )
+    parser.add_argument(
+        "--bus", action='store_true', help="This will show the Business folder within Documents"
+    )
+    parser.add_argument(
+        "--cs",
+        action='store_true',
+        help="This will show the Computer Science folder within Documents",
+    )
+    parser.add_argument(
+        "--python", action='store_true', help="This will open the PyCharm application"
+    )
 
     args = parser.parse_args()
 
     try:
-        if args.school:
-            if args.school.engine:
-                engineering()
-            elif args.school == "cs":
-                computer_science()
-            elif args.school == "python":
-                python()
-            elif args.school == "bus":
-                business()
-            elif args.school == "start":
-                std_day()
-        elif args.engine:
-            if args.engine == "engine":
-                engineering()
+        if args.engine:
+            engineering()
+        if args.cs:
+            computer_science()
+        if args.python:
+            python()
+        if args.bus:
+            business()
+        if args.start:
+            std_day()
     except Exception as e:
-        print("An error has occurred", e)
+        print(e)
