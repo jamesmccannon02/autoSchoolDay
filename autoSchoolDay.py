@@ -29,14 +29,20 @@ def python():
 if __name__ == '__main__':
 
     parser = argparse.ArgumentParser(description="This allows quick opening of applications used within the school day")
+    subparsers = parser.add_subparsers()
 
-    parser.add_argument('school', choices=['start', 'engine', 'bus', 'cs', 'python'])
+    #main commands
+    parser.add_argument("school", choices=['start', 'engine', 'bus', 'cs', 'python'])
+
+    #Sub commands
+    parser_engineering = subparsers.add_parser("engine", help="This is used to control all aspects of the engineering command")
+
 
     args = parser.parse_args()
 
     try:
         if args.school:
-            if args.school == "engine":
+            if args.school.engine:
                 engineering()
             elif args.school == "cs":
                 computer_science()
@@ -46,5 +52,8 @@ if __name__ == '__main__':
                 business()
             elif args.school == "start":
                 std_day()
+        elif args.engine:
+            if args.engine == "engine":
+                engineering()
     except Exception as e:
         print("An error has occurred", e)
