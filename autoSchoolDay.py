@@ -36,20 +36,27 @@ if __name__ == '__main__':
     )
 
     parser.add_argument(
+        "-s",
         "--start",
         action='store_true',
         help="This will open all the standard applications used within the school day.",
     )
+
     parser.add_argument(
-        "--engine",
+        "-e",
+        "--engineering",
         action='store_true',
         help="This will show the Engineering folder within Documents",
     )
     parser.add_argument(
-        "--bus", action='store_true', help="This will show the Business folder within Documents"
+        "-b",
+        "--business",
+        action='store_true',
+        help="This will show the Business folder within Documents"
     )
     parser.add_argument(
-        "--cs",
+        "-c",
+        "--computer",
         action='store_true',
         help="This will show the Computer Science folder within Documents",
     )
