@@ -27,7 +27,7 @@ def python():
 
 
 def fusion():
-    system("open /Applications/Autodesk\ Fusion\ 360.app/")
+    system("open ~/Applications/Autodesk\ Fusion\ 360.app/")
 
 if __name__ == '__main__':
 
@@ -57,6 +57,10 @@ if __name__ == '__main__':
         "--python", action='store_true', help="This will open the PyCharm application"
     )
 
+    parser.add_argument(
+        "--fusion", action='store_true', help="This will open the Fusion 365 application"
+    )
+
     args = parser.parse_args()
 
     try:
@@ -70,5 +74,7 @@ if __name__ == '__main__':
             business()
         if args.start:
             std_day()
+        if args.fusion:
+            fusion()
     except Exception as e:
         print(e)
