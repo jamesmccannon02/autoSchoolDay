@@ -11,7 +11,7 @@ def std_day():
 
 
 def engineering():
-    system("open /Documents/school/Year 12\_&\_13/Engineering")
+    system("open ~/Documents/school/Year\ 12_\&_13/Engineering")
 
 
 def business():
@@ -25,6 +25,9 @@ def computer_science():
 def python():
     system("open /Applications/PyCharm\ CE.app/")
 
+
+def fusion():
+    system("open /Applications/Autodesk\ Fusion\ 360.app/")
 
 if __name__ == '__main__':
 
