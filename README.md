@@ -1,6 +1,9 @@
 # Automatically open your applications for school (Under development)
 
-This is designed to open a number of applications on startup using a simple ```school``` command within the command prompt
+This is designed to open a number of applications on startup using a simple ```school``` command within the command prompt.
+
+## Intended use
+This plugin is currently produced for the sole use of myself as the developer and as a result there will be limited support.  Additionally, you may find it difficult to adapt it to your use case if you don't have a basic grasp of python.
 
 # Installation
 
