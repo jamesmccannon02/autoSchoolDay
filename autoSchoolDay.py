@@ -76,5 +76,5 @@ if __name__ == '__main__':
             std_day()
         if args.fusion:
             fusion()
-    except Exception as e:
-        print(e)
+    except Exception as error:
+        print(error)
