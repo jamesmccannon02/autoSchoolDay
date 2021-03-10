@@ -1,6 +1,5 @@
-#!/usr/local/bin/python3
 
-import sys
+
 from os import system
 
 import argparse
@@ -28,6 +27,7 @@ def python():
 
 def fusion():
     system("open ~/Applications/Autodesk\ Fusion\ 360.app/")
+
 
 if __name__ == '__main__':
 
@@ -71,13 +71,13 @@ if __name__ == '__main__':
     args = parser.parse_args()
 
     try:
-        if args.engine:
+        if args.engineering:
             engineering()
-        if args.cs:
+        if args.computer:
             computer_science()
         if args.python:
             python()
-        if args.bus:
+        if args.business:
             business()
         if args.start:
             std_day()
